@@ -56,6 +56,39 @@ public class TransformOperations : MonoBehaviour
     }
 }
 ```
+OR
+```
+using UnityEngine;
+
+public class program : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Transform o1;
+    public Transform o2;
+    public Transform o3;
+    void Start()
+    {
+        print("welcome");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            o1.Translate(0.2f, 0f, 0f);
+        }
+        if (Input.GetKeyUp(KeyCode.Y))
+        {
+            o2.localScale += new Vector3(2f, 2f, 2f);
+        }
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            o3.Rotate(0f, 2f, 0f);
+        }
+    }
+}
+```
 ### Output:
 <img width="1536" height="863" alt="image" src="https://github.com/user-attachments/assets/e2bf6bbd-548a-4225-948b-a0fb3b625ba2" />
 
