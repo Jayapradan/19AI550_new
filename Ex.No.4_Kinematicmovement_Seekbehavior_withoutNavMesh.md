@@ -80,11 +80,44 @@ public class fleeScript : MonoBehaviour
     }
 }
 ```
+OR
+```
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class welcome1 : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Transform target;
+    public Transform f;
+    public Transform s;
+    private float speed = 0.2f;
+    void Start()
+    {
+        print("Welcome");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // seek script
+        Vector3 dir=(target.position - s.position).normalized;
+        s.position += dir * speed;
+        //flee script
+        Vector3 dir1= (f.position - target.position).normalized;
+        f.position += dir1* speed;
+    }
+}
+```
+
 ### Output:
 
 
+<img width="1530" height="863" alt="image" src="https://github.com/user-attachments/assets/02570151-5163-44e3-a631-b1dee8dcacad" />
 
 
+<img width="1536" height="863" alt="image" src="https://github.com/user-attachments/assets/0a4b2bb0-542b-4c74-8176-77e6a9ce5b5b" />
 
 
 
